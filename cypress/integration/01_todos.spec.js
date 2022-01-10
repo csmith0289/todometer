@@ -80,7 +80,7 @@ context('Todos', () => {
     // Each individual list should have the proper quantity
     cy.getByTestId('pending-list').children().should('have.length', 2);
     cy.getByTestId('paused-list').children().should('have.length', 0);
-    cy.getByTestId('completed-list').children().should('have.length', 1);
+    cy.get('#panel--1--0').children().should('have.length', 1);
   });
 
   it('Deletes todos', () => {
